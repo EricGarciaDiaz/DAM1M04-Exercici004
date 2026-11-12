@@ -1,1 +1,823 @@
+/* ESTILS GENERALS */
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #fbfbfa;
+    color: #26262a;
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #8066c8;
+    outline-offset: 3px;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1, h2, h3 {
+    font-weight: 500;
+}
+
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.seccio {
+    padding: 90px 0;
+}
+
+.etiqueta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #77747b;
+}
+
+.degradat {
+    background: linear-gradient(90deg, #2eb872, #2486e8, #a82bd4, #e85494);
+    color: transparent;
+    background-clip: text;
+}
+
+/* CAPCALERA */
+
+.capcalera {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fbfbfa;
+    border-bottom: 1px solid #e5e3e1;
+}
+
+.capcalera-contingut {
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo img {
+    width: 25px;
+    height: 25px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a,
+.menu-peu a {
+    font-size: 13px;
+}
+
+.boto {
+    display: inline-block;
+    padding: 13px 19px;
+    border-radius: 25px;
+    font-size: 13px;
+}
+
+.boto-negre {
+    background-color: #222226;
+    color: white;
+}
+
+.boto-blanc {
+    border: 1px solid #d9d7d5;
+    background-color: white;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 90px 0 80px;
+    background:
+        radial-gradient(ellipse at 80% 15%, #f3dce8, transparent 60%),
+        radial-gradient(ellipse at 60% 0%, #fae6d1, transparent 55%),
+        #fbfbfa;
+}
+
+.hero-graph {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    -webkit-mask-image: radial-gradient(ellipse, #000 60%, transparent 100%);
+    mask-image: radial-gradient(ellipse, #000 60%, transparent 100%);
+}
+
+.hero-graph canvas {
+    display: block;
+    background: transparent;
+    pointer-events: none;
+}
+
+.hero > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-contingut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-logo img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.08;
+    margin: 18px 0 25px;
+}
+
+.text-gran {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #62616a;
+}
+
+.botons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.hero-producte {
+    flex: 1;
+    padding: 18px;
+    border: 1px solid #e7e2e3;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-producte img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* TITOLS DE SECCIO */
+
+.titol-seccio {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.titol-seccio h2,
+.valor-text h2,
+.atlas-capcalera h2,
+.demo h2 {
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.titol-seccio > p:last-child {
+    color: #66636b;
+    line-height: 1.6;
+}
+
+.titol-esquerra {
+    margin-left: 0;
+    text-align: left;
+}
+
+/* TARGETES PLATFORM */
+
+.targetes {
+    display: flex;
+    gap: 18px;
+}
+
+.targeta {
+    flex: 1;
+    padding: 28px;
+    border: 1px solid #e0dddc;
+    border-radius: 13px;
+    background-color: white;
+}
+
+.targeta h3 {
+    font-size: 25px;
+    margin: 25px 0 12px;
+}
+
+.targeta p:not(.etiqueta) {
+    min-height: 75px;
+    font-size: 14px;
+    color: #68666d;
+    line-height: 1.7;
+}
+
+.targeta a {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.core {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 18px;
+    padding: 23px 28px;
+    border: 1px solid #e0dddc;
+    border-radius: 13px;
+    background-color: #f2f0ed;
+}
+
+.core h3 {
+    margin: 8px 0 0;
+}
+
+.core > p {
+    max-width: 600px;
+    margin: 0;
+    color: #68666d;
+    font-size: 14px;
+}
+
+/* MISSATGE CENTRAL */
+
+.missatge {
+    padding: 55px 0;
+    background: linear-gradient(100deg, #f1e2df, #f1e9f3, #e9edf4);
+    text-align: center;
+}
+
+.missatge p {
+    margin: 0;
+    font-size: 26px;
+}
+
+/* OPERATIONAL VALUE */
+
+.valor-contingut {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.valor-text {
+    flex: 1;
+}
+
+.valor-text > p:last-child {
+    color: #66636b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.valor-targetes {
+    flex: 1.4;
+    display: flex;
+    gap: 15px;
+}
+
+.valor-targeta {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid #e0dddc;
+    border-radius: 13px;
+    background-color: white;
+}
+
+.valor-numero {
+    margin: 25px 0 12px;
+    font-size: 43px;
+}
+
+.valor-targeta p:last-child {
+    color: #68666d;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* FROM THE FIELD */
+
+.camp {
+    padding: 90px 0;
+    background-color: #111318;
+    color: white;
+}
+
+.camp-contingut {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.camp-contingut > div {
+    flex: 1;
+}
+
+.camp .etiqueta {
+    color: #b5b4bc;
+}
+
+.camp-numero {
+    margin: 20px 0 0;
+    font-size: 85px;
+}
+
+.camp h2 {
+    font-size: 35px;
+}
+
+.camp-text > p:not(.text-gran) {
+    color: #c0bfc6;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.fitxa-camp {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.fitxa-camp div {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #41434a;
+    border-radius: 9px;
+}
+
+.fitxa-camp strong,
+.fitxa-camp small {
+    display: block;
+}
+
+.fitxa-camp strong {
+    margin: 12px 0 5px;
+}
+
+.fitxa-camp small {
+    color: #b5b4bc;
+}
+
+/* WORKFLOWS */
+
+.llista-workflows {
+    border-top: 1px solid #dedcda;
+}
+
+.workflow {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px 5px;
+    border-bottom: 1px solid #dedcda;
+}
+
+.workflow > .etiqueta {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.workflow div {
+    flex: 1;
+}
+
+.workflow h3 {
+    margin: 0 0 7px;
+    font-size: 20px;
+}
+
+.workflow p {
+    margin: 0;
+    color: #68666d;
+    font-size: 13px;
+}
+
+.fletxa {
+    font-size: 22px;
+}
+
+/* ATLAS */
+
+.atlas {
+    background-color: #f2f0ed;
+}
+
+.atlas-capcalera {
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+.atlas-capcalera > p:last-child {
+    color: #68666d;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.atlas-contingut {
+    display: flex;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.atlas-imatge {
+    flex: 1.5;
+    padding: 15px;
+    border: 1px solid #dedbd8;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.atlas-imatge img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.atlas-passos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.atlas-passos article {
+    display: flex;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid #d8d5d2;
+}
+
+.atlas-passos h3 {
+    margin-bottom: 5px;
+}
+
+.atlas-passos p {
+    margin: 0;
+    color: #68666d;
+    font-size: 12px;
+}
+
+.consulta {
+    margin-top: 25px;
+    padding: 25px;
+    border: 1px solid #dedbd8;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.consulta-pregunta {
+    margin: 18px 0 10px;
+    font-size: 19px;
+}
+
+.consulta > p:last-child {
+    margin-bottom: 0;
+    color: #68666d;
+    font-size: 13px;
+}
+
+.nodes {
+    display: flex;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.node {
+    flex: 1;
+    padding: 22px;
+    border: 1px solid #dedbd8;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.node label {
+    display: block;
+    margin: 15px 0 7px;
+    font-size: 12px;
+}
+
+.node input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d8d5d2;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+/* GOVERNANCE */
+
+.governanca-targetes .targeta {
+    min-height: 180px;
+}
+
+.governanca-targeta h3 {
+    margin-top: 5px;
+}
+
+.governanca-targeta p {
+    color: #68666d;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.execucio {
+    margin-top: 35px;
+    padding: 25px;
+    border: 1px solid #e0dddc;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.execucio-passos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.execucio-passos div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.execucio-passos div span {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #f0e9f2;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.garanties {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 18px;
+    background-color: #f0eeeb;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* GET STARTED */
+
+.demo {
+    padding: 100px 0;
+    background: linear-gradient(110deg, #f2e2e2, #ece7f1, #e8edf4);
+    text-align: center;
+}
+
+.demo-contingut {
+    max-width: 700px;
+}
+
+.demo h2 {
+    margin: 20px 0;
+}
+
+.demo-contingut > p:not(.etiqueta) {
+    margin-bottom: 25px;
+    color: #68666d;
+}
+
+/* PEU DE PAGINA */
+
+.peu {
+    padding: 45px 0 25px;
+    background-color: #14171c;
+    color: white;
+}
+
+.confiança {
+    display: flex;
+    gap: 25px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #41434a;
+}
+
+.confiança div {
+    flex: 1;
+}
+
+.confiança .etiqueta {
+    color: #b5b4bc;
+}
+
+.peu-baix {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 28px;
+}
+
+.logo-peu {
+    color: white;
+}
+
+.logo-peu img {
+    filter: brightness(0) invert(1);
+}
+
+.menu-peu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright {
+    margin: 25px 0 0;
+    color: #b5b4bc;
+    font-size: 11px;
+}
+
+/* ADAPTACIO PER A MOBILS */
+
+@media (max-width: 767px) {
+
+    .seccio,
+    .camp {
+        padding: 65px 0;
+    }
+
+    .capcalera-contingut {
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .boto {
+        padding: 11px 14px;
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero-graph {
+        display: none !important;
+    }
+
+    .hero-contingut,
+    .valor-contingut,
+    .camp-contingut,
+    .atlas-contingut {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .titol-seccio h2,
+    .valor-text h2,
+    .atlas-capcalera h2,
+    .demo h2 {
+        font-size: 32px;
+    }
+
+    .targetes,
+    .valor-targetes,
+    .nodes,
+    .confiança {
+        flex-direction: column;
+    }
+
+    .targeta p:not(.etiqueta) {
+        min-height: 0;
+    }
+
+    .core {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .missatge p {
+        font-size: 21px;
+    }
+
+    .camp-numero {
+        font-size: 65px;
+    }
+
+    .fitxa-camp {
+        flex-direction: column;
+    }
+
+    .workflow {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .workflow > .etiqueta {
+        width: 100%;
+    }
+
+    .workflow div {
+        width: 80%;
+    }
+
+    .execucio-passos {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .execucio-passos > .fletxa {
+        display: none;
+    }
+
+    .peu-baix {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .menu a {
+        font-size: 9px;
+    }
+
+    .missatge p {
+        font-size: 18px;
+    }
+}
+
+/* El grafic de fons es desactiva quan l'usuari prefereix menys moviment */
+@media (prefers-reduced-motion: reduce) {
+    .hero-graph {
+        display: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}

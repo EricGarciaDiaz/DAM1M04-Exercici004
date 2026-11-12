@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Strata — Exercici004</title>
 
+    <link rel="icon" href="assets/img/strata-icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="estils.css">
+
+    <!-- Scripts originals de l'animacio del professor -->
+    <script defer src="assets/js/vendor/three.min.js"></script>
+    <script defer src="assets/js/vendor/3d-force-graph.min.js"></script>
+    <script defer src="assets/js/hero-graph.js"></script>
+</head>
+<body>
+
+    <!-- CAPCALERA -->
+    <header class="capcalera">
+        <div class="container capcalera-contingut">
+            <a class="logo" href="#inici">
+                <img src="assets/img/strata-icon.svg" alt="Strata">
+                <span>STRATA</span>
+            </a>
+
+            <nav class="menu">
+                <a href="#platform">Platform</a>
+                <a href="#workflows">Workflows</a>
+                <a href="#atlas">Atlas</a>
+                <a href="#governance">Governance</a>
+            </nav>
+
+            <a class="boto boto-negre" href="#demo">Book a Demo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="inici">
+            <div class="container">
+                <div class="hero-contingut">
+                    <div class="hero-text">
+                        <div class="hero-logo">
+                            <img src="assets/img/strata-icon.svg" alt="Strata symbol">
+                        </div>
+                        <p class="etiqueta">AI AGENTS FOR LAW FIRM OPERATIONS</p>
+                        <h1>The work your firm doesn't bill for, <span class="degradat">done.</span></h1>
+                        <p class="text-gran">
+                            AI agents that run the operational work your firm doesn't bill for.
+                            We turn it into recovered revenue and reclaimed capacity.
+                        </p>
+                        <div class="botons">
+                            <a class="boto boto-negre" href="#demo">Book a Demo</a>
+                            <a class="boto boto-blanc" href="#platform">Explore the Platform</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-producte">
+                        <p class="etiqueta">NEXUS · OPERATIONAL OVERVIEW</p>
+                        <!-- Canvia nexus.png pel nom exacte de la imatge del ZIP del professor -->
+                        <img src="assets/img/nexus.png" alt="Nexus product screen">
+                    </div>
+                </div>
+            </div>
+        </section>
+          <!-- PLATFORM -->
+        <section class="seccio" id="platform">
+            <div class="container">
+                <div class="titol-seccio">
+                    <p class="etiqueta">THE STRATA PLATFORM</p>
+                    <h2>One platform. Three surfaces.</h2>
+                    <p>Strata runs inside the systems your firm already uses.</p>
+                </div>
+
+                <div class="targetes">
+                    <article class="targeta">
+                        <p class="etiqueta">KNOWLEDGE</p>
+                        <h3>Atlas</h3>
+                        <p>Map what your firm knows and turn that knowledge into useful information.</p>
+                        <a href="#atlas">Explore Atlas &rarr;</a>
+                    </article>
+
+                    <article class="targeta">
+                        <p class="etiqueta">OPERATIONS</p>
+                        <h3>Nexus</h3>
+                        <p>Connect your systems and help your team manage operational work.</p>
+                        <a href="#workflows">Explore Nexus &rarr;</a>
+                    </article>
+
+                    <article class="targeta">
+                        <p class="etiqueta">WORKFLOWS</p>
+                        <h3>Canvas</h3>
+                        <p>Organise repeatable tasks with clear owners and acceptance criteria.</p>
+                        <a href="#governance">Explore Canvas &rarr;</a>
+                    </article>
+                </div>
+
+                <div class="core">
+                    <div>
+                        <p class="etiqueta">THE FOUNDATION</p>
+                        <h3>Core</h3>
+                    </div>
+                    <p>Shared information, permissions and activity for the whole platform.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSATGE -->
+        <section class="missatge">
+            <div class="container">
+                <p>Recover revenue. Reclaim capacity. <span class="degradat">Move work forward.</span></p>
+            </div>
+        </section>
+
+        <!-- OPERATIONAL VALUE -->
+        <section class="seccio" id="valor">
+            <div class="container valor-contingut">
+                <div class="valor-text">
+                    <p class="etiqueta">OPERATIONAL VALUE</p>
+                    <h2>Two numbers. Reported every week.</h2>
+                    <p>Strata shows the value of the work completed by reporting revenue recovered and capacity reclaimed.</p>
+                </div>
+
+                <div class="valor-targetes">
+                    <article class="valor-targeta">
+                        <p class="etiqueta">REVENUE RECOVERED</p>
+                        <!-- Substitueix el guio per la dada de la captura del professor -->
+                        <p class="valor-numero">$—</p>
+                        <p>Revenue recovered for the firm.</p>
+                    </article>
+                    <article class="valor-targeta">
+                        <p class="etiqueta">CAPACITY RECLAIMED</p>
+                        <!-- Substitueix el guio per la dada de la captura del professor -->
+                        <p class="valor-numero">— hrs</p>
+                        <p>Hours returned to the team.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FROM THE FIELD -->
+        <section class="camp">
+            <div class="container camp-contingut">
+                <div>
+                    <p class="etiqueta">FROM THE FIELD</p>
+                    <p class="camp-numero">13,000</p>
+                    <h2>Invoices.</h2>
+                </div>
+                <div class="camp-text">
+                    <p class="text-gran">The work your firm doesn't bill for can still create value.</p>
+                    <p>Strata helps teams review invoice information, find problems and understand what needs attention.</p>
+                    <div class="fitxa-camp">
+                        <div>
+                            <span class="etiqueta">EXAMPLE</span>
+                            <strong>13,000</strong>
+                            <small>Invoices</small>
+                        </div>
+                        <div>
+                            <span class="etiqueta">RESULT</span>
+                            <strong>Clear view</strong>
+                            <small>Useful information</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
